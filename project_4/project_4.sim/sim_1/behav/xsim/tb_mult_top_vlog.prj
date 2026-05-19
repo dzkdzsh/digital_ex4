@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../project_4.srcs/sources_1/new/adder_blocks.v" \
+"../../../../project_4.srcs/sources_1/new/behav_mult.v" \
+"../../../../project_4.srcs/sources_1/new/signed_array_mult.v" \
+"../../../../project_4.srcs/sources_1/new/signed_braun_mult.v" \
+"../../../../project_4.srcs/sources_1/new/unsigned_array_mult.v" \
+"../../../../project_4.srcs/sources_1/new/unsigned_braun_mult.v" \
+"../../../../project_4.srcs/sim_1/new/tb_mult_top.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
