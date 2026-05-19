@@ -1,12 +1,43 @@
 Vivado Simulator 2017.4
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: D:/Program/vivado/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 099841656fb145c8994a900c84d8b46e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot sim_behav xil_defaultlib.sim xil_defaultlib.glbl -log elaborate.log 
+Running: D:/Program/vivado/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 099841656fb145c8994a900c84d8b46e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
 Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/course/DigitalDesign1/Experiment/0519ex4/ex4/ex4.srcs/sources_1/new/top.v" Line 1. Module top doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/course/DigitalDesign1/Experiment/0519ex4/ex4/ex4.srcs/sources_1/new/array_mult_unsigned.v" Line 1. Module array_mult_unsigned doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/course/DigitalDesign1/Experiment/0519ex4/ex4/ex4.srcs/sources_1/new/adder.v" Line 1. Module half_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/course/DigitalDesign1/Experiment/0519ex4/ex4/ex4.srcs/sources_1/new/adder.v" Line 11. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/course/DigitalDesign1/Experiment/0519ex4/ex4/ex4.srcs/sources_1/new/adder.v" Line 11. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/course/DigitalDesign1/Experiment/0519ex4/ex4/ex4.srcs/sources_1/new/adder.v" Line 1. Module half_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/course/DigitalDesign1/Experiment/0519ex4/ex4/ex4.srcs/sources_1/new/adder.v" Line 1. Module half_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/course/DigitalDesign1/Experiment/0519ex4/ex4/ex4.srcs/sources_1/new/adder.v" Line 11. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/course/DigitalDesign1/Experiment/0519ex4/ex4/ex4.srcs/sources_1/new/adder.v" Line 11. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/course/DigitalDesign1/Experiment/0519ex4/ex4/ex4.srcs/sources_1/new/adder.v" Line 11. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/course/DigitalDesign1/Experiment/0519ex4/ex4/ex4.srcs/sources_1/new/adder.v" Line 1. Module half_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/course/DigitalDesign1/Experiment/0519ex4/ex4/ex4.srcs/sources_1/new/adder.v" Line 11. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/course/DigitalDesign1/Experiment/0519ex4/ex4/ex4.srcs/sources_1/new/adder.v" Line 11. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/course/DigitalDesign1/Experiment/0519ex4/ex4/ex4.srcs/sources_1/new/adder.v" Line 11. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/course/DigitalDesign1/Experiment/0519ex4/ex4/ex4.srcs/sources_1/new/array_mult_unsigned.v" Line 1. Module array_mult_unsigned doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/course/DigitalDesign1/Experiment/0519ex4/ex4/ex4.srcs/sources_1/new/adder.v" Line 1. Module half_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/course/DigitalDesign1/Experiment/0519ex4/ex4/ex4.srcs/sources_1/new/adder.v" Line 11. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/course/DigitalDesign1/Experiment/0519ex4/ex4/ex4.srcs/sources_1/new/adder.v" Line 11. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/course/DigitalDesign1/Experiment/0519ex4/ex4/ex4.srcs/sources_1/new/adder.v" Line 1. Module half_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/course/DigitalDesign1/Experiment/0519ex4/ex4/ex4.srcs/sources_1/new/adder.v" Line 1. Module half_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/course/DigitalDesign1/Experiment/0519ex4/ex4/ex4.srcs/sources_1/new/adder.v" Line 11. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/course/DigitalDesign1/Experiment/0519ex4/ex4/ex4.srcs/sources_1/new/adder.v" Line 11. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/course/DigitalDesign1/Experiment/0519ex4/ex4/ex4.srcs/sources_1/new/adder.v" Line 11. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/course/DigitalDesign1/Experiment/0519ex4/ex4/ex4.srcs/sources_1/new/adder.v" Line 1. Module half_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/course/DigitalDesign1/Experiment/0519ex4/ex4/ex4.srcs/sources_1/new/adder.v" Line 11. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/course/DigitalDesign1/Experiment/0519ex4/ex4/ex4.srcs/sources_1/new/adder.v" Line 11. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/course/DigitalDesign1/Experiment/0519ex4/ex4/ex4.srcs/sources_1/new/adder.v" Line 11. Module full_adder doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.sim
+Compiling module xil_defaultlib.half_adder
+Compiling module xil_defaultlib.full_adder
+Compiling module xil_defaultlib.array_mult_unsigned
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.tb_top
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot sim_behav
+Built simulation snapshot tb_top_behav

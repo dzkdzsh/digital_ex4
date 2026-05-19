@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date             : Tue May 19 19:19:44 2026
+| Date             : Tue May 19 19:48:35 2026
 | Host             : LAPTOP-21A831KV running 64-bit major release  (build 9200)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.115        |
+| Total On-Chip Power (W)  | 0.116        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.009        |
+| Dynamic (W)              | 0.010        |
 | Device Static (W)        | 0.106        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 83.7         |
@@ -53,16 +53,16 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      132 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       74 |     53200 |            0.14 |
-|   CARRY4       |    <0.001 |        7 |     13300 |            0.05 |
-|   Register     |    <0.001 |       27 |    106400 |            0.03 |
-|   F7/F8 Muxes  |    <0.001 |       10 |     53200 |            0.02 |
-|   Others       |     0.000 |        4 |       --- |             --- |
-| Signals        |    <0.001 |      110 |       --- |             --- |
-| I/O            |     0.008 |       30 |       125 |           24.00 |
+| Slice Logic    |    <0.001 |      103 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       56 |     53200 |            0.11 |
+|   F7/F8 Muxes  |    <0.001 |       14 |     53200 |            0.03 |
+|   CARRY4       |    <0.001 |        5 |     13300 |            0.04 |
+|   Register     |    <0.001 |       25 |    106400 |            0.02 |
+|   Others       |     0.000 |        2 |       --- |             --- |
+| Signals        |    <0.001 |       78 |       --- |             --- |
+| I/O            |     0.009 |       30 |       125 |           24.00 |
 | Static Power   |     0.106 |          |           |                 |
-| Total          |     0.115 |          |           |                 |
+| Total          |     0.116 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Vccint    |       1.000 |     0.008 |       0.001 |      0.007 |
 | Vccaux    |       1.800 |     0.011 |       0.000 |      0.010 |
-| Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |
+| Vcco33    |       3.300 |     0.004 |       0.003 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -145,11 +145,10 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+--------+-----------+
-| Name   | Power (W) |
-+--------+-----------+
-| top    |     0.009 |
-|   mut4 |    <0.001 |
-+--------+-----------+
++------+-----------+
+| Name | Power (W) |
++------+-----------+
+| top  |     0.010 |
++------+-----------+
 
 

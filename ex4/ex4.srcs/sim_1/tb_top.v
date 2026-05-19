@@ -32,19 +32,13 @@ module tb_top();
         sw = {4'd3, 4'd5};
         #100;
 
-        // Change mode to 1 (Unsigned Braun)
+        // Change mode to 1 (Signed)
         mode_btn = 0; // Press
         #25000000;    // Wait for debounce > 20ms
         mode_btn = 1; // Release
         #25000000;
 
-        // Test Signed Array (Mode 2)
-        mode_btn = 0; // Press
-        #25000000;
-        mode_btn = 1; // Release
-        #25000000;
-
-        sw = {4'b1110, 4'b0010}; // -2 * 2 = -4 (1111_1100 = FC)
+        sw = {4'b1111, 4'b0001}; // -1 * 1 = -1 (Sign-Magnitude output: 1000_0001 = 81)
         #100;
 
         $finish;

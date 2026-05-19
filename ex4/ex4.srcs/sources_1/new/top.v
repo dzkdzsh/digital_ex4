@@ -37,15 +37,12 @@ module top (
     assign btn_press = (btn_state_prev == 1'b1 && btn_state == 1'b0);
 
     // ----------------------------------------------------
-    // Mode Selection
+    // Mode Selection (Toggle between Unsigned and Signed)
     // ----------------------------------------------------
-    reg [2:0] mode = 3'd0;
+    reg mode = 1'b0; // 0: Unsigned, 1: Signed
     always @(posedge clk) begin
         if (btn_press) begin
-            if (mode >= 3'd4)
-                mode <= 3'd0;
-            else
-                mode <= mode + 1'b1;
+            mode <= ~mode;
         end
     end
 
@@ -55,23 +52,26 @@ module top (
     wire [3:0] A = sw[7:4];
     wire [3:0] B = sw[3:0];
 
-    wire [7:0] res0, res1, res2, res3, res4;
+    wire [7:0] res_unsign;
+    array_mult_unsigned mut_unsign(.A(A), .B(B), .P(res_unsign));
 
-    array_mult_unsigned mut0(.A(A), .B(B), .P(res0));
-    braun_mult_unsigned mut1(.A(A), .B(B), .P(res1));
-    array_mult_signed   mut2(.A(A), .B(B), .P(res2));
-    braun_mult_signed   mut3(.A(A), .B(B), .P(res3));
-    behavioral_mult     mut4(.A(A), .B(B), .P(res4));
+    // Signed arithmetic using sign-magnitude conversion
+    wire sign_A = A[3];
+    wire sign_B = B[3];
+    wire [3:0] abs_A = sign_A ? (~A + 1'b1) : A;
+    wire [3:0] abs_B = sign_B ? (~B + 1'b1) : B;
+    
+    wire [7:0] mag_mult;
+    array_mult_unsigned mut_mag(.A(abs_A), .B(abs_B), .P(mag_mult));
+    
+    wire result_sign = (mag_mult == 8'd0) ? 1'b0 : (sign_A ^ sign_B);
+    wire [7:0] res_sign = {result_sign, mag_mult[6:0]};
 
     reg [7:0] current_res;
     always @(*) begin
         case (mode)
-            3'd0: current_res = res0;
-            3'd1: current_res = res1;
-            3'd2: current_res = res2;
-            3'd3: current_res = res3;
-            3'd4: current_res = res4;
-            default: current_res = 8'd0;
+            1'b0: current_res = res_unsign;
+            1'b1: current_res = res_sign;
         endcase
     end
 
@@ -88,12 +88,8 @@ module top (
     always @(*) begin
         case (mode)
             // dp, g, f, e, d, c, b, a (0 means ON)
-            3'd0: seg_reg = 8'b11000000; // 0
-            3'd1: seg_reg = 8'b11111001; // 1
-            3'd2: seg_reg = 8'b10100100; // 2
-            3'd3: seg_reg = 8'b10110000; // 3
-            3'd4: seg_reg = 8'b10011001; // 4
-            default: seg_reg = 8'b11000000;
+            1'b0: seg_reg = 8'b11000000; // Display '0' for Unsigned
+            1'b1: seg_reg = 8'b11111001; // Display '1' for Signed
         endcase
     end
     assign seg = seg_reg;
